@@ -17,4 +17,23 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--Inter-Variable), sans-serif; 
+  font-weight: var(--font-weight-content);
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  background-image: var(--bg-img);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  border: 1px solid;
+  padding: 30px;
+  margin: 30px;
+}
+
+h1 {
+  font-weight: var(--font-weight-title);
 }
