@@ -6,5 +6,6 @@
   --font-weight-title: 700;
   --background-color-repeat-linear: #d3d3d3;
   --background-color-linear: to bottom, #e7e7e7 0.01%, #1a1a1a;
+  --bg-color: white;
   --accent-color: rgba(0, 0, 0, 1);
 }
