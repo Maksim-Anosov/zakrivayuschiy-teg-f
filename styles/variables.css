@@ -4,7 +4,7 @@
   --PressStart2P: "PressStart2P";
   --font-weight-content: 400;
   --font-weight-title: 700;
-  --background-color: rgba(255, 255, 255, 1);
+  --background-color-repeat-linear: #d3d3d3;
+  --background-color-linear: to bottom, #e7e7e7 0.01%, #1a1a1a;
   --accent-color: rgba(0, 0, 0, 1);
-  --bg-img: url(../images/background_dark.png);
 }

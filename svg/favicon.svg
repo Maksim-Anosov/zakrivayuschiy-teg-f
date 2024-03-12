@@ -1,14 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="none">
   <style>
+      svg {
+        fill: black;
+      }
+
         @media (prefers-color-scheme: dark) {
       :root {
-        fill: white;
-      }
-    }
-
-        @media (prefers-color-scheme: light) {
-      :root {
-        fill: black;
+        fill: green;
       }
     }
   </style>
