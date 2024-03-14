@@ -11,6 +11,7 @@
   --accent-color: rgba(0, 204, 20, 1);
   --font-weight-content: 465;
   --font-weight-title: 785;
+  --button-hover-color: rgba(0, 204, 20, 1);
 }
 
 :root.theme-light {
@@ -20,6 +21,8 @@
   --accent-color: rgba(0, 0, 0, 1);
   --font-weight-content: 400;
   --font-weight-title: 700;
+  --button-hover-color: white;
+
 }
 
 @media (prefers-color-scheme: dark) {

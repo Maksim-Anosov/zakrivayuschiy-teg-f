@@ -8,4 +8,5 @@
   --background-color-linear: to bottom, #e7e7e7 0.01%, #1a1a1a;
   --bg-color: white;
   --accent-color: rgba(0, 0, 0, 1);
+  --button-hover-color: white;
 }

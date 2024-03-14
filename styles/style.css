@@ -93,12 +93,15 @@
   content: "";
   display: block;
   border-bottom: 2px solid var(--accent-color);
-  transform: translate(-50%) scaleX(0);
+  /* transform: translate(-50%) scaleX(0); */
+  transform: scaleX(0);
+  transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-.theme-menu__button:focus-visible.theme-menu__button::after {
-  transform: translate(0) scaleX(1);
+.theme-menu__button:focus-visible::after {
+  /* transform: translate(0) scaleX(1); */
+  transform: scaleX(1);
   opacity: 0.6;
 }
 
@@ -193,15 +196,62 @@
 }
 
 .card__like-button {
+  position: relative;
   border: 2px solid var(--accent-color);
   padding: 9px 37px;
+  transition: box-shadow 0.3s ease;
 }
 
+.hover-effect::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-effect:hover::before {
+  transform: scaleX(1);
+}
+
+.card__like-button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color); 
+}
+
+/* .card__like-button:active {
+  transform: scale(95%);
+} */
+
 .button__text {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
+  color: var(--button-hover-color);
   font-family: "PressStart2P", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 90%;
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  transition: border 0.3s ease;
+
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
 }
 
 /* fotter -------------------------------------------------------------------------------------------------------------------------------------- */
@@ -213,12 +263,24 @@
 }
 
 .footer__button {
+  position: relative;
   border: 2px solid var(--accent-color);
   background: var(--bg-color);
   padding: 18px 20px;
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.footer__button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.footer__button svg {
+  mix-blend-mode: difference;
+  fill: var(--button-hover-color);
 }
 
 /* queries -------------------------------------------------------------------------------------------------------------------------------------- */
