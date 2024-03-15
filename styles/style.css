@@ -200,6 +200,7 @@
   border: 2px solid var(--accent-color);
   padding: 9px 37px;
   transition: box-shadow 0.3s ease;
+  min-width: 162px;
 }
 
 .hover-effect::before {
@@ -243,7 +244,78 @@
   display: flex;
   align-items: center;
   transition: border 0.3s ease;
+}
 
+.core {
+  transition: fill .3s .03s linear;
+}
+
+.like-icon:hover .core {
+  fill: var(--accent-color);
+  transition: fill .3s linear;
+}
+
+.main-body {
+  transition: fill .3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill .3s .05s linear;
+}
+
+.like-icon:active .core {
+  fill: red;
+  transition: fill .3s linear;
+}
+
+.like-icon:active .main-body {
+  fill: red;
+  transition: fill .3s .05s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: red;
+  transition: fill .3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: red;
+  transition: fill .3s .05s linear;
+}
+
+.contour {
+  transition: fill .1s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: red;
+  transition: fill .3s .06s linear;
+}
+
+.is-liked .heart {
+  animation: scale .3s ease-in .1s 1 alternate;
+  transform-origin: center;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.is-liked .sparks {
+  animation: sparks .3s ease-in .3s 1 alternate;
+}
+
+@keyframes sparks {
+  100% {
+    fill: red;
+  }
 }
 
 .card__icon-button:focus {

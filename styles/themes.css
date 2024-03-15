@@ -22,7 +22,6 @@
   --font-weight-content: 400;
   --font-weight-title: 700;
   --button-hover-color: white;
-
 }
 
 @media (prefers-color-scheme: dark) {
