@@ -338,7 +338,7 @@
   position: relative;
   border: 2px solid var(--accent-color);
   background: var(--bg-color);
-  padding: 18px 20px;
+  padding: 13px 18px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -350,9 +350,9 @@
   box-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.footer__button svg {
-  mix-blend-mode: difference;
+.floppy {
   fill: var(--button-hover-color);
+  mix-blend-mode: difference;
 }
 
 /* queries -------------------------------------------------------------------------------------------------------------------------------------- */
