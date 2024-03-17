@@ -115,12 +115,32 @@
       </ul>
     </main>
     <footer class="footer">
-      <button type="button" class="footer__button hover-effect">
-        <svg width="21" height="21" class="floppy">
+      <button
+        type="button"
+        onclick="window['dialog'].showModal();"
+        aria-controls="dialog"
+        class="footer__button hover-effect"
+      >
+        <svg viewBox="0 0 29 28" class="floppy">
           <use href="/svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
+      <dialog class="popup" id="dialog">
+        <div class="popup-container">
+          <svg viewBox="0 0 29 28" class="floppy">
+            <use href="/svg/floppy.svg#floppy"></use>
+          </svg>
+          <span class="button__text">Вставьте дискету, чтобы продолжить</span>
+        </div>
+        <button 
+          type="button"
+          class="dialog__button hover-effect"
+          onclick="window['dialog'].close()"
+          >
+          <span class="button__text">OK</span>
+        </button>
+      </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
   </body>

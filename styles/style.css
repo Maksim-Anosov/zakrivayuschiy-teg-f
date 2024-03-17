@@ -20,18 +20,26 @@
   font-family: var(--Inter-Variable), sans-serif;
   font-weight: var(--font-weight-content);
   color: var(--accent-color);
-  background-image: repeating-linear-gradient(
+  background-image: 
+  repeating-linear-gradient(
       to right,
       var(--background-color-repeat-linear),
-      transparent 2px
+      var(--background-color-repeat-linear) 2px,
+      transparent 2px,
+      transparent 4px
     ),
     repeating-linear-gradient(
       to bottom,
       var(--background-color-repeat-linear),
-      transparent 2px
+      var(--background-color-repeat-linear) 2px,
+      transparent 2px,
+      transparent 4px
     ),
-    linear-gradient(var(--background-color-linear));
-  background-size: cover;
+    linear-gradient(
+    to bottom,  
+    var(--background-color-linear),
+    var(--background-color-linear-second)
+    );
   background-attachment: fixed;
 }
 
@@ -76,7 +84,6 @@
 .theme-menu__button {
   position: relative;
   transition: opacity 0.3s ease;
-
 }
 
 .theme-menu__button:hover {
@@ -118,7 +125,6 @@
 }
 
 @keyframes selected {
-
   100% {
     left: -16px;
   }
@@ -221,7 +227,7 @@
 
 .card__like-button:focus-visible {
   outline: none;
-  box-shadow: 2px 2px 0 var(--accent-color); 
+  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 /* .card__like-button:active {
@@ -247,54 +253,54 @@
 }
 
 .core {
-  transition: fill .3s .03s linear;
+  transition: fill 0.3s 0.03s linear;
 }
 
 .like-icon:hover .core {
   fill: var(--accent-color);
-  transition: fill .3s linear;
+  transition: fill 0.3s linear;
 }
 
 .main-body {
-  transition: fill .3s linear;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
   fill: var(--accent-color);
-  transition: fill .3s .05s linear;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon:active .core {
   fill: red;
-  transition: fill .3s linear;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
   fill: red;
-  transition: fill .3s .05s linear;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .core {
   fill: red;
-  transition: fill .3s linear;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: red;
-  transition: fill .3s .05s linear;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .contour {
-  transition: fill .1s linear;
+  transition: fill 0.1s linear;
 }
 
 .like-icon.is-liked .contour {
   fill: red;
-  transition: fill .3s .06s linear;
+  transition: fill 0.3s 0.06s linear;
 }
 
 .is-liked .heart {
-  animation: scale .3s ease-in .1s 1 alternate;
+  animation: scale 0.3s ease-in 0.1s 1 alternate;
   transform-origin: center;
 }
 
@@ -309,7 +315,7 @@
 }
 
 .is-liked .sparks {
-  animation: sparks .3s ease-in .3s 1 alternate;
+  animation: sparks 0.3s ease-in 0.3s 1 alternate;
 }
 
 @keyframes sparks {
@@ -351,8 +357,53 @@
 }
 
 .floppy {
-  fill: var(--button-hover-color);
+  color: var(--button-hover-color);
   mix-blend-mode: difference;
+  width: 22px;
+}
+
+/* modal ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+.popup {
+  padding: 30px 42px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--bg-color);
+  width: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
+}
+
+.popup-container {
+  display: flex;
+  column-gap: 20px;
+}
+
+.popup-container .button__text {
+  line-height: 1.5;
+}
+
+.popup .floppy {
+  width: 35%;
+}
+
+.dialog__button {
+  position: relative; 
+  border: 2px solid var(--accent-color);
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  padding: 7px 0;
+}
+
+.dialog__button:focus {
+  outline: none;
+}
+
+.dialog__button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.popup::backdrop {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* queries -------------------------------------------------------------------------------------------------------------------------------------- */
@@ -361,5 +412,10 @@
   .footer__button {
     flex-direction: column;
     padding: 15px 20px;
+  }
+
+  .floppy {
+    width: 28px;
+    height: 28px;
   }
 }
