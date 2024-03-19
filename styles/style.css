@@ -19,6 +19,7 @@
   min-block-size: 100dvb;
   font-family: var(--Inter-Variable), sans-serif;
   font-weight: var(--font-weight-content);
+  /* font-variation-settings: 'wgth' var(--font-weight-content); */
   color: var(--accent-color);
   background-image: repeating-linear-gradient(
       to right,
@@ -204,7 +205,7 @@
   /* font-family: "Inter-Variable", sans-serif; */
   font-size: 18px;
   line-height: 21px;
-  font-weight: var(--font-weight-content);
+  /* font-weight: var(--font-weight-content); */
 }
 
 .card__text:not(:last-of-type) {
