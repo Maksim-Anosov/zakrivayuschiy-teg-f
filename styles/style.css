@@ -20,8 +20,7 @@
   font-family: var(--Inter-Variable), sans-serif;
   font-weight: var(--font-weight-content);
   color: var(--accent-color);
-  background-image: 
-  repeating-linear-gradient(
+  background-image: repeating-linear-gradient(
       to right,
       var(--background-color-repeat-linear),
       var(--background-color-repeat-linear) 2px,
@@ -36,9 +35,9 @@
       transparent 4px
     ),
     linear-gradient(
-    to bottom,  
-    var(--background-color-linear),
-    var(--background-color-linear-second)
+      to bottom,
+      var(--background-color-linear),
+      var(--background-color-linear-second)
     );
   background-attachment: fixed;
 }
@@ -56,7 +55,7 @@
 }
 
 .header__title {
-  font-family: "PressStart2P", sans-serif;
+  font-family: var(--PressStart2P), sans-serif;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 1;
   margin-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
@@ -64,14 +63,14 @@
 }
 
 .header__paragraph {
-  font-family: "PressStart2P", sans-serif;
+  font-family: var(--PressStart2P), sans-serif;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
   margin-bottom: 25px;
 }
 
 .header__theme-menu {
-  font-family: "PressStart2P", sans-serif;
+  font-family: var(--PressStart2P), sans-serif;
   font-size: 14px;
   line-height: 1;
   margin-bottom: 25px;
@@ -156,7 +155,7 @@
 }
 
 .card__title {
-  font-family: "Inter-Variable", sans-serif;
+  /* font-family: "Inter-Variable", sans-serif; */
   font-size: 18px;
   font-weight: var(--font-weight-title);
   padding: 4px 10px;
@@ -177,15 +176,22 @@
   position: absolute;
   right: 11px;
   top: 25px;
-  font-family: "PressStart2P", sans-serif;
+  font-family: var(--PressStart2P), sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 14px;
-  -webkit-text-stroke: 1px var(--bg-color);
+  line-height: 1;
   color: var(--accent-color);
   opacity: 0.5;
   mix-blend-mode: hard-light;
   z-index: 5;
+  text-shadow: -1px 0 var(--bg-color), 0 1px var(--bg-color), 1px 0 var(--bg-color), 0 -1px var(--bg-color);
+}
+
+@supports (-webkit-text-stroke: 1px var(--bg-color)) {
+  .img-lable {
+    -webkit-text-stroke: 1px var(--bg-color);
+    text-shadow: none;
+  }
 }
 
 .content-wrapper {
@@ -195,7 +201,7 @@
 }
 
 .card__text {
-  font-family: "Inter-Variable", sans-serif;
+  /* font-family: "Inter-Variable", sans-serif; */
   font-size: 18px;
   line-height: 21px;
   font-weight: var(--font-weight-content);
@@ -250,7 +256,7 @@
   z-index: 2;
   mix-blend-mode: difference;
   color: var(--button-hover-color);
-  font-family: "PressStart2P", sans-serif;
+  font-family: var(--PressStart2P), sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 90%;
@@ -404,6 +410,7 @@
   color: var(--button-hover-color);
   mix-blend-mode: difference;
   width: 22px;
+  height: 22px;
 }
 
 /* modal ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -429,7 +436,7 @@
 }
 
 .dialog__button {
-  position: relative; 
+  position: relative;
   border: 2px solid var(--accent-color);
   display: block;
   width: 100%;
@@ -452,14 +459,14 @@
 
 /* queries -------------------------------------------------------------------------------------------------------------------------------------- */
 
-@media (width <= 375px) {
+@media (width <= 376px) {
   .footer__button {
     flex-direction: column;
     padding: 15px 20px;
   }
 
   .header__title {
-    font-size: max(calc(49 / 375 * 100vw), 40px)
+    font-size: max(calc(49 / 375 * 100vw), 40px);
   }
 
   .floppy {
