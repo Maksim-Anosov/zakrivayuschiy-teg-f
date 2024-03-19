@@ -19,8 +19,8 @@
   </head>
   <body class="page">
     <header class="header">
-      <h1 class="header__title">&lt;/HTML&gt;</h1>
-      <p class="header__paragraph">закрывающий тег</p>
+      <a class="header-logo">&lt;/HTML&gt;</a>
+      <h1 class="header-title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -58,7 +58,7 @@
               <span class="img-lable">&lt;/HTML&gt;</span>
               <img
                 class="card__img"
-                src="/images/image.png"
+                src="./images/image.png"
                 alt="автодом для путешествий"
               />
             </div>
@@ -80,6 +80,7 @@
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     class="like-icon"
+                    aria-hidden="true"
                   >
                     <g class="heart">
                       <path
@@ -105,7 +106,7 @@
                     />
                   </svg>
                 </button>
-                <button type="button" class="card__like-button hover-effect">
+                <button type="button" class="card__like-button hover-effect button-style">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -169,7 +170,7 @@
                     />
                   </svg>
                 </button>
-                <button type="button" class="card__like-button hover-effect">
+                <button type="button" class="card__like-button hover-effect button-style">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -230,7 +231,7 @@
                     />
                   </svg>
                 </button>
-                <button type="button" class="card__like-button hover-effect">
+                <button type="button" class="card__like-button hover-effect button-style">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -293,7 +294,7 @@
                     />
                   </svg>
                 </button>
-                <button type="button" class="card__like-button hover-effect">
+                <button type="button" class="card__like-button hover-effect button-style">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -357,7 +358,7 @@
                     />
                   </svg>
                 </button>
-                <button type="button" class="card__like-button hover-effect">
+                <button type="button" class="card__like-button hover-effect button-style">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -418,7 +419,7 @@
                     />
                   </svg>
                 </button>
-                <button type="button" class="card__like-button hover-effect">
+                <button type="button" class="card__like-button hover-effect button-style">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -481,7 +482,7 @@
                     />
                   </svg>
                 </button>
-                <button type="button" class="card__like-button hover-effect">
+                <button type="button" class="card__like-button hover-effect button-style">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -546,7 +547,7 @@
                     />
                   </svg>
                 </button>
-                <button type="button" class="card__like-button hover-effect">
+                <button type="button" class="card__like-button hover-effect button-style">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -554,35 +555,35 @@
           </article>
         </li>
       </ul>
-    </main>
-    <footer class="footer">
-      <button
-        type="button"
-        onclick="window['dialog'].showModal();"
-        aria-controls="dialog"
-        class="footer__button hover-effect"
-      >
-        <svg viewBox="0 0 29 28" class="floppy">
-          <use href="/svg/floppy.svg#floppy"></use>
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-      <dialog class="popup" id="dialog">
-        <div class="popup-container">
-          <svg viewBox="0 0 29 28" class="floppy">
-            <use href="/svg/floppy.svg#floppy"></use>
-          </svg>
-          <span class="button__text">Вставьте дискету, чтобы продолжить</span>
-        </div>
+      <section class="button-section">
         <button
           type="button"
-          class="dialog__button hover-effect"
-          onclick="window['dialog'].close()"
+          onclick="window['dialog'].showModal();"
+          aria-controls="dialog"
+          class="button-section__button hover-effect button-style"
         >
-          <span class="button__text">OK</span>
+          <svg viewBox="0 0 40 40" class="floppy">
+            <use href="./svg/floppy-2.svg#floppy-2"></use>
+          </svg>
+          <span class="button__text">Сохранить на память</span>
         </button>
-      </dialog>
-    </footer>
+        <dialog class="popup" id="dialog">
+          <div class="popup-container">
+            <svg viewBox="0 0 40 40" class="floppy">
+              <use href="./svg/floppy-2.svg#floppy-2"></use>
+            </svg>
+            <p class="button__text">Вставьте дискету, чтобы продолжить</p>
+          </div>
+          <button
+            type="button"
+            class="dialog__button hover-effect button-style"
+            onclick="window['dialog'].close()"
+          >
+            <span class="button__text">OK</span>
+          </button>
+        </dialog>
+      </section>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

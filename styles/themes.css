@@ -13,6 +13,8 @@
   --font-weight-content: 465;
   --font-weight-title: 785;
   --button-hover-color: rgba(0, 204, 20, 1);
+  --bg-spare-color: black;
+
 }
 
 :root.theme-light {
@@ -24,10 +26,12 @@
   --font-weight-content: 400;
   --font-weight-title: 700;
   --button-hover-color: white;
+  --bg-spare-color: white;
+
 }
 
 @media (prefers-color-scheme: dark) {
-  :root.theme-auto {
+  :root {
     --background-color-repeat-linear: #000;
     --background-color-linear:#007f0c;
     --background-color-linear-second: #004306;
@@ -36,11 +40,13 @@
     --font-weight-content: 465;
     --font-weight-title: 785;
     --button-hover-color: rgba(0, 204, 20, 1);
+    --bg-spare-color: black;
+
   }
 }
 
 @media (prefers-color-scheme: light) {
-  :root.theme-auto {
+  :root {
     --background-color-repeat-linear: #d3d3d3;
     --background-color-linear:#e7e7e7 0.01%;
     --background-color-linear-second: #1a1a1a;
@@ -49,5 +55,7 @@
     --font-weight-content: 400;
     --font-weight-title: 700;
     --button-hover-color: white;
+    --bg-spare-color: white;
+
   }
 }
