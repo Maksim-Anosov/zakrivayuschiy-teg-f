@@ -18,7 +18,8 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: var(--font-weight-content);
+  /* font-weight: var(--font-weight-content); */
+  font-variation-settings: "wght" var(--font-weight-content);
   color: var(--accent-color);
   background-color: var(--bg-spare-color);
   background-image: repeating-linear-gradient(
@@ -163,7 +164,7 @@
 
 .card__title {
   font-size: 18px;
-  font-weight: var(--font-weight-title);
+  font-variation-settings: "wght" var(--font-weight-title);
   padding: 4px 10px;
 }
 
