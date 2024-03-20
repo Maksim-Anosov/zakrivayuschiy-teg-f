@@ -232,10 +232,7 @@
 
 .card__like-button {
   position: relative;
-  /* border: 2px solid var(--accent-color); */
-  padding: 8px 35px;
-  /* transition: box-shadow 0.3s ease; */
-  min-width: 162px;
+  min-width: 130px;
 }
 
 .button-style {
@@ -361,6 +358,7 @@
 
 .popup-container .button__text {
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .popup .floppy {
@@ -378,7 +376,7 @@
 }
 
 .popup::backdrop {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
 }
 
 /* queries -------------------------------------------------------------------------------------------------------------------------------------- */
@@ -410,6 +408,6 @@
 
   .img-lable {
     right: 23px;
-    top: 29px;
+    top: 21px;
   }
 }
